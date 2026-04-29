@@ -37,6 +37,11 @@ class TestTextNode(unittest.TestCase):
         url_node = TextNode("This is a text node", TextType.link)
         self.assertEqual(str(url_node), "TextNode(This is a text node,TextType.link,None)")
 
+    def test_text(self):
+        node = TextNode("This is a text node", TextType.text)
+        html_node = TextNode.text_node_to_html_node(node)
+        self.assertEqual(html_node.tag, None)
+        self.assertEqual(html_node.value, "This is a text node")
 
 if __name__ == "__main__":
     unittest.main()
