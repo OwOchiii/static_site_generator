@@ -5,7 +5,7 @@ class TextType(Enum):
     text = ''
     bold = '**'
     italic = '_'
-    code_text = '`'
+    code = '`'
     link = '[anchor text](url)'
     image_link = '[image link](url)'
 
