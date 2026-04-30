@@ -42,3 +42,4 @@ class TextNode:
             return LeafNode("img", "", {"src": self.url, "alt": self.text})
         else:
             raise ValueError("Invalid text type")
+

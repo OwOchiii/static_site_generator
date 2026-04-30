@@ -7,3 +7,4 @@ def extract_markdown_image(text):
 def extract_markdown_link(text):
     match = re.findall(r"(?<!!)\[(.*?)\]\((.*?)\)", text)
     return match
+
