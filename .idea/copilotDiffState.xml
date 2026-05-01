@@ -30,6 +30,15 @@
             </PendingDiffInfo>
           </value>
         </entry>
+        <entry key="/template (snapshot).html">
+          <value>
+            <PendingDiffInfo>
+              <option name="filePath" value="/template (snapshot).html" />
+              <option name="originalContent" value="&lt;!doctype html&gt;&#10;&lt;html&gt;&#10;  &lt;head&gt;&#10;    &lt;meta charset=&quot;utf-8&quot; /&gt;&#10;    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot; /&gt;&#10;    &lt;title&gt;{{ Title }}&lt;/title&gt;&#10;    &lt;link href=&quot;/index.css&quot; rel=&quot;stylesheet&quot; /&gt;&#10;  &lt;/head&gt;&#10;&#10;  &lt;body&gt;&#10;    &lt;article&gt;{{ Content }}&lt;/article&gt;&#10;  &lt;/body&gt;&#10;&lt;/html&gt;" />
+              <option name="updatedContent" value="&lt;!doctype html&gt;&#10;&lt;html&gt;&#10;  &lt;head&gt;&#10;    &lt;meta charset=&quot;utf-8&quot; /&gt;&#10;    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot; /&gt;&#10;    &lt;title&gt;{{ Title }}&lt;/title&gt;&#10;    &lt;link href=&quot;{{ basepath }}index.css&quot; rel=&quot;stylesheet&quot; /&gt;&#10;  &lt;/head&gt;&#10;&#10;  &lt;body&gt;&#10;    &lt;article&gt;{{ Content }}&lt;/article&gt;&#10;  &lt;/body&gt;&#10;&lt;/html&gt;" />
+            </PendingDiffInfo>
+          </value>
+        </entry>
       </map>
     </option>
   </component>
