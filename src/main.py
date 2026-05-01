@@ -5,6 +5,7 @@ from copystatic import copy_files_recursive
 import os
 import shutil
 import generate_page
+from pathlib import Path
 dir_path_static = "./static"
 dir_path_public = "./docs"
 
@@ -18,6 +19,8 @@ def main():
     print("Copying static files to docs directory...")
     copy_files_recursive(dir_path_static, dir_path_public)
     generate_page.generate_pages_recursive("content", "./template.html", dir_path_public, basepath)
+    Path(dir_path_public).mkdir(parents=True, exist_ok=True)
+    (Path(dir_path_public) / ".nojekyll").write_text("")
     text_node = TextNode('Hello, World!', TextType.bold)
     print(text_node)
 
