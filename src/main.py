@@ -15,6 +15,10 @@ def main():
         shutil.rmtree(dir_path_public)
 
     basepath = sys.argv[1] if len(sys.argv) > 1 else "/"
+    if not basepath.startswith("/"):
+        basepath = "/" + basepath
+    if not basepath.endswith("/"):
+        basepath += "/"
 
     print("Copying static files to docs directory...")
     copy_files_recursive(dir_path_static, dir_path_public)
