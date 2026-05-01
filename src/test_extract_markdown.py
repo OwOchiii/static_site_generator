@@ -1,5 +1,5 @@
 import unittest
-from extract_markdown import extract_markdown_image, extract_markdown_link
+from extract_markdown import extract_markdown_image, extract_markdown_link, extract_title
 
 class TestExtractMarkdown(unittest.TestCase):
     def test_extract_markdown_image(self):
@@ -26,6 +26,15 @@ class TestExtractMarkdown(unittest.TestCase):
             matches,
             [("link", "https://www.google.com")]
         )
+
+    def test_extract_title(self):
+        markdown = "# Hello   \n\nSome body text"
+        self.assertEqual(extract_title(markdown), "Hello")
+
+    def test_extract_title_missing_h1(self):
+        markdown = "## Not a title\n\nSome body text"
+        with self.assertRaises(Exception):
+            extract_title(markdown)
 
 if __name__ == "__main__":
     unittest.main()
